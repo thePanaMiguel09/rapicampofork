@@ -1,0 +1,42 @@
+body {
+  background: url("../img/fonodo7.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9); /* efecto traslúcido */
+  border-radius: 12px;
+}
+.servicio-card {
+  position: relative;
+  padding-top: 35px;
+}
+
+.icono-servicio {
+  position: absolute;
+  font-size: 22px;
+  background: white;
+  padding: 6px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Esquina superior izquierda */
+.icon-left {
+  top: 5px;
+  left: 5px;
+}
+
+/* Esquina superior derecha */
+.icon-right {
+  top: 5px;
+  right: 5px;
+}
+.d-flex img {
+  transition: transform 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.d-flex img:hover {
+  transform: scale(1.08);
+}

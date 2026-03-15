@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  backend:
+    build: .
+    container_name: rappicampo
+    restart: always
+    ports:
+      - "5012:5012"
+    environment:
+      - DB_HOST=mysql_server
+      - DB_USER=rapicampo
+      - DB_PASSWORD=rapicampo2025
+      - DB_NAME=rapicampo
+    networks:
+      - my_network
+networks:
+  my_network:
+    external: true

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapi-Campo - Servicios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light">
+
+  <!-- Menú de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Rapi-Campo</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="solicitudes.html">Solicitudes</a></li>
+          <li class="nav-item"><a class="nav-link" href="historial.html">Historial</a></li>
+          <li class="nav-item"><a class="nav-link text-warning" href="index.html">Salir</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenedor principal -->
+  <div class="container mt-4">
+
+    <h2 class="mb-4">Publicar un Servicio</h2>
+
+    <!-- Tabs para las dos opciones -->
+    <ul class="nav nav-tabs mb-3" id="serviceTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="ofrecer-tab" data-bs-toggle="tab" data-bs-target="#ofrecer" type="button" role="tab">
+          Voy al pueblo
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="necesitar-tab" data-bs-toggle="tab" data-bs-target="#necesitar" type="button" role="tab">
+          Necesito servicio
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="serviceTabsContent">
+      <!-- Opción: Voy al pueblo -->
+      <div class="tab-pane fade show active" id="ofrecer" role="tabpanel">
+        <div class="card p-4 shadow-sm mb-5">
+          <form id="offerForm">
+            <div class="mb-3">
+              <label for="dateOffer" class="form-label">Fecha</label>
+              <input type="date" id="dateOffer" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="availabilityOffer" class="form-label">Disponibilidad / Horario</label>
+              <input type="text" id="availabilityOffer" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="detailsOffer" class="form-label">Detalles (qué puedes hacer)</label>
+              <textarea id="detailsOffer" class="form-control" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Publicar disponibilidad</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Opción: Necesito servicio -->
+      <div class="tab-pane fade" id="necesitar" role="tabpanel">
+        <div class="card p-4 shadow-sm mb-5">
+          <form id="needForm">
+            <div class="mb-3">
+              <label for="dateNeed" class="form-label">Fecha</label>
+              <input type="date" id="dateNeed" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="detailsNeed" class="form-label">¿Qué necesitas?</label>
+              <textarea id="detailsNeed" class="form-control" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Publicar necesidad</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Muro de publicaciones -->
+    <h2 class="mb-4">Muro de Servicios</h2>
+    <div id="servicesWall" class="row g-3">
+      <!-- Aquí se mostrarán ofertas y necesidades -->
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/servicios.js"></script>
+</body>
+</html>
